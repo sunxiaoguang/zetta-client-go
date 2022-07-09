@@ -50,6 +50,7 @@ type DataClient struct {
 
 type DataClientConfig struct {
 	NumChannels int // 并发度，对应 session pool
+	RecvMsgSize int // max message size
 	SessionPoolConfig
 }
 
@@ -68,7 +69,10 @@ func NewDataClient(ctx context.Context, serverAddr, dbName string, conf DataClie
 
 	dc := &DataClient{database: dbName}
 
-	dialOpts := []grpc.DialOption{grpc.WithInsecure()}
+	dialOpts := []grpc.DialOption{
+		grpc.WithInsecure(),
+		grpc.WithDefaultCallOptions(grpc.MaxCallRecvMsgSize(conf.RecvMsgSize)),
+	}
 
 	rsTarget := ParseTarget(serverAddr)
 	if strings.ToLower(rsTarget.Scheme) == "dns" {
