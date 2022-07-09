@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"log"
 
-	zetta "github.com/zhihu/zetta-client-go"
+	zetta "github.com/sunxiaoguang/zetta-client-go"
 
 	"github.com/k0kubun/pp"
 	tspb "github.com/zhihu/zetta-proto/pkg/tablestore"

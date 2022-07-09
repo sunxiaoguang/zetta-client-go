@@ -22,7 +22,7 @@ import (
 
 	"cloud.google.com/go/civil"
 	"github.com/golang/protobuf/proto"
-	"github.com/zhihu/zetta-client-go/internal/fields"
+	"github.com/sunxiaoguang/zetta-client-go/internal/fields"
 	tspb "github.com/zhihu/zetta-proto/pkg/tablestore"
 	"google.golang.org/grpc/codes"
 )

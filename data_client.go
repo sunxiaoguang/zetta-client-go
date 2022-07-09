@@ -23,7 +23,7 @@ import (
 	"google.golang.org/grpc/resolver"
 	"google.golang.org/grpc/resolver/dns"
 
-	"github.com/zhihu/zetta-client-go/utils/retry"
+	"github.com/sunxiaoguang/zetta-client-go/utils/retry"
 	tspb "github.com/zhihu/zetta-proto/pkg/tablestore"
 )
 

@@ -16,7 +16,7 @@ package zetta
 import (
 	"time"
 
-	"github.com/zhihu/zetta-client-go/utils/retry"
+	"github.com/sunxiaoguang/zetta-client-go/utils/retry"
 	tspb "github.com/zhihu/zetta-proto/pkg/tablestore"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"
